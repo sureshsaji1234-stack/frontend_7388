@@ -1,0 +1,13 @@
+HTML............
+GIT
+-software runs on your local sys
+it track your local file sys- changes you make-what are the modules change- everything the git sw will read the process
+It will take your file to the online website called github.
+You can ues the git command.
+
+
+GITHUB
+website- web app run on your cloud.
+online storage of your file.
+these will be used by the developer.
+a developer should not store them as zip file.
