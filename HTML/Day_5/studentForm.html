@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+    <section>
+        <h1>Student Form</h1>
+    </section>
+    <form>
+
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" minlength="4" maxlength="20" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" maxlength="25" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="text" minlength="8" maxlength="20" required></td>
+            </tr>
+            <tr>
+                <td><label for="mobilenumber">Mobile No.</label></td>
+                <td><input type="text" minlength="8" maxlength="12" required></td>
+            </tr>
+            <tr>
+                <td><label for="dateofbirth">Date of Birth</label></td>
+                <td><input type="date" required></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td><input type="radio" name="gender" required>male
+                <input type="radio" name="gender" required>female</td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><textarea name="address" id="address" placeholder="along with pincode"></textarea></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
