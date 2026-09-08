@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.title {
+    color: white;
+    background-color: navy;
+}
+.section {
+    color: black;
+    background-color: lightgray;
+}
+.section-title {
+    color: darkblue;
+    background-color: lightblue;
+}
+.teacher {
+    color: darkgreen;
+    background-color: lightgreen;
+}
+.student {
+    color: darkred;
+    background-color: pink;
+}
+.topic {
+    color: darkorange;
+    background-color: lightyellow;
+}
+.status {
+    color: white;
+    background-color: green;
+}
