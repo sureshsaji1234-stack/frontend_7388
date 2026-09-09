@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.mainp{
+    padding: 10px;
+    background-color: aquamarine;
+    display: flex;
+}
+.product1 {
+    background-color: rgb(25, 198, 255);
+    width: 300px;
+    padding: 20px;
+    border: 3px solid rgb(7, 0, 137);
+    margin: 20px;
+}
+
+.product2 {
+    background-color: rgb(80, 242, 80);
+    width: 350px;
+    padding: 30px;
+    border: 4px solid green;
+    margin: 30px;
+
+}
+
+.product3 {
+    background-color: rgb(247, 45, 45);
+    width: 400px;
+    padding: 15px;
+    border: 5px solid red;
+    margin: 40px;
+}

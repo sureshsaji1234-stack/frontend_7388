@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.parent{
+    background-color: rgb(23, 125, 203);
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    
+
+}
+.child{
+    background-color: white;
+    padding: 2px;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 2px blanchedalmond;
+
+}
+.bgcol{
+    background-color: blue;
+    border-radius: 20px;
+}
+.btn{
+    background-color: blueviolet;
+    color: white;
+}
+.btn:hover{
+    background-color: bisque;
+    color: blue;
+    cursor: pointer;
+}
+
