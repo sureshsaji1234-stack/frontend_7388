@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.parent{
+    background-color: antiquewhite;
+    padding: 20px;
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    gap:20px;
+    text-align: center;
+    justify-content: center;
+
+}
+.child{
+    background-color: aqua;
+    color: blue;
+    height: 200px;
+    width: 280px;
+    padding: 5px;
+    border: 5px solid gray;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+}
