@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+h3 {
+    font-size: 1.2rem;
+    margin: 0.5em;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pare {
+    background-color: antiquewhite;
+    padding: 1rem;
+    border: 5px solid black;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box {
+    background-color: aqua;
+    padding: 0.5rem;
+    height: 18.75rem;
+    width: 25rem;
+    border: 1px solid black;
+    border-radius: 0.625rem;
+}
+
+.box h3 {
+    color: blue;
+}
+
+.box:nth-child(2) h3 {
+    color: red;
+}
+
+img {
+    border-radius: 0.625rem 0.625rem 0.0625rem 0.0625rem;
+}
