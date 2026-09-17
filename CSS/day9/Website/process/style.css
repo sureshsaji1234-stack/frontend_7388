@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Arial', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.all{
+    background-color: rgb(232, 232, 232);
+    padding: 1px;
+    height: 100vh;
+    width: 100vw;
+}
+.parone{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    gap: 35%;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+}
+.navone{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: left;
+}
+.navtwo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: right;
+}
+.btnone{
+    background-color: red;
+    color: white;
+    padding: 1px;
+    height: 30px;
+    width: 100px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+.btnone:hover{
+    background-color: rgb(159, 0, 0);
+    color: white;
+    padding: 1px;
+    height: 30px;
+    width: 100px;
+    border: 2px solid rgb(159, 0, 0);
+    border-radius: 5px;
+}
+a:hover{
+    color: red;
+}
+.partwo{
+    text-align: center;
+    padding: 1px;
+    margin-top: 100px;
+    margin-left: 210px;
+    margin-right: 210px;
+}
+.partwo > h1{
+    font-size: 45px;
+}
+.partwo > p{
+    font-size:x-large;
+}
+.partre{
+    padding: 1px;
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+.btntwo{
+    background-color: white;
+    padding: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 120px;
+    border: 2px solid grey;
+    border-radius: 20px;
+
+}
+.btntwo:hover{
+    border: 2px solid black;
+}
+.prfrbg{
+    background-color: rgb(232, 232, 232);
+    width: 100vw;
+}
+.parfor{
+    
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 10px;
+    row-gap: 10px;
+
+}
+.box{
+    background-color: white;
+    padding: 15px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.5s;
+}
+.box:hover{
+    background-color: white;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box:hover img{
+    transform: scale(1.1);
+}
+
+
