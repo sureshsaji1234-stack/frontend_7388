@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kaapi Works — filter coffee roasters</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { ink:'#14212B', slate2:'#3B4C58', paper:'#F1F3EF', brass:'#B4832B', sage:'#5E7A63' },
+    fontFamily: { display:['Fraunces','Georgia','serif'], body:['Inter','system-ui','sans-serif'] }
+  }}
+}
+</script>
+<style>
+  :root{
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    --bg:#F1F3EF; --fg:#14212B; --muted:#3B4C58; --line:#D6DAD2; --card:#FFFFFF;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){--bg:#101A22;--fg:#EAEFE9;--muted:#A7B4AE;--line:#25343E;--card:#17242D;}
+  }
+  :root[data-theme="dark"]{--bg:#101A22;--fg:#EAEFE9;--muted:#A7B4AE;--line:#25343E;--card:#17242D;}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(5.5rem + env(safe-area-inset-top,0px));height:100%}
+  body{background:var(--bg);color:var(--fg)}
+  .muted{color:var(--muted)} .line{border-color:var(--line)} .card{background:var(--card)}
+  :focus-visible{outline:2px solid #B4832B;outline-offset:3px;border-radius:2px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky z-50 border-b line backdrop-blur" style="top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 88%,transparent)">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-5 py-3">
+
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-2.5">
+      <span class="grid h-9 w-9 place-items-center rounded-full bg-ink text-paper font-display text-lg" style="background:#14212B;color:#F1F3EF">K</span>
+      <span class="font-display text-xl">Kaapi Works</span>
+    </a>
+
+    <!-- Search bar -->
+    <form role="search" class="order-3 w-full sm:order-none sm:w-auto sm:flex-1 sm:max-w-xs" onsubmit="return false">
+      <label for="q" class="sr-only">Search coffees</label>
+      <input id="q" type="search" placeholder="Search coffees, e.g. Attikan"
+             class="w-full rounded-full border line card px-4 py-2 text-sm placeholder:text-[color:var(--muted)]">
+    </form>
+
+    <!-- Nav -->
+    <nav aria-label="Main">
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
+        <li><a href="#home" class="hover:text-brass">Home</a></li>
+        <li><a href="#coffees" class="hover:text-brass">Coffees</a></li>
+        <li><a href="#roasting" class="hover:text-brass">Roasting</a></li>
+        <li><a href="#brewing" class="hover:text-brass">Brewing</a></li>
+        <li><a href="#visit" class="hover:text-brass">Visit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ 1. HERO ============ -->
+  <section id="home" class="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+    <p class="muted text-sm">Roasted Tuesdays in Kodambakkam</p>
+    <h1 class="mt-4 font-display text-5xl leading-[1.05] sm:text-7xl">Coffee that still<br>tastes like the hill<br>it grew on.</h1>
+    <p class="muted mt-6 max-w-[60ch] text-lg">We buy from twelve estates across the Western Ghats, roast in 4&nbsp;kg batches, and ship within three days of the roast date. Nothing sits on a shelf.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#coffees" class="rounded-full px-6 py-3 text-sm font-medium" style="background:#B4832B;color:#14212B">Browse this week's coffees</a>
+      <a href="#visit" class="rounded-full border line px-6 py-3 text-sm">Visit the roastery</a>
+    </div>
+  </section>
+
+  <!-- ============ 2. COFFEES ============ -->
+  <section id="coffees" class="border-t line py-20">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 class="font-display text-4xl">Coffees</h2>
+      <p class="muted mt-3 max-w-[60ch]">Six lots on the bench right now. Use the search box above to narrow them down.</p>
+      <div id="grid" class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="card rounded-xl border line p-6" data-name="attikan estate chikmagalur chocolate">
+          <h3 class="font-display text-2xl">Attikan Estate</h3>
+          <p class="muted mt-1 text-sm">Chikmagalur · washed</p>
+          <p class="mt-4 text-sm">Dark chocolate, clove, a long sweet finish. The one we give people who say they don't like filter coffee.</p>
+          <p class="mt-5 text-sm" style="color:#B4832B">₹640 / 250g</p>
+        </article>
+        <article class="card rounded-xl border line p-6" data-name="ratnagiri peaberry citrus">
+          <h3 class="font-display text-2xl">Ratnagiri Peaberry</h3>
+          <p class="muted mt-1 text-sm">Baba Budangiri · natural</p>
+          <p class="mt-4 text-sm">Orange peel and jaggery. Bright enough for a pour-over, sturdy enough for a decoction.</p>
+          <p class="mt-5 text-sm" style="color:#B4832B">₹720 / 250g</p>
+        </article>
+        <article class="card rounded-xl border line p-6" data-name="pearl mountain robusta strong">
+          <h3 class="font-display text-2xl">Pearl Mountain</h3>
+          <p class="muted mt-1 text-sm">Wayanad · washed robusta</p>
+          <p class="mt-4 text-sm">Built for milk. Walnut, cocoa nib, thick body that holds up to a 70:30 pour.</p>
+          <p class="mt-5 text-sm" style="color:#B4832B">₹480 / 250g</p>
+        </article>
+        <article class="card rounded-xl border line p-6" data-name="thogarihunkal honey floral">
+          <h3 class="font-display text-2xl">Thogarihunkal</h3>
+          <p class="muted mt-1 text-sm">Chikmagalur · honey</p>
+          <p class="mt-4 text-sm">Jasmine and stone fruit, low acidity. Our most delicate lot, and the first to sell out.</p>
+          <p class="mt-5 text-sm" style="color:#B4832B">₹810 / 250g</p>
+        </article>
+        <article class="card rounded-xl border line p-6" data-name="kalledeverapura blend house filter">
+          <h3 class="font-display text-2xl">House Filter Blend</h3>
+          <p class="muted mt-1 text-sm">Three estates · 80:20 chicory</p>
+          <p class="mt-4 text-sm">Our everyday decoction blend. Ground coarse for the traditional steel filter.</p>
+          <p class="mt-5 text-sm" style="color:#B4832B">₹390 / 250g</p>
+        </article>
+        <article class="card rounded-xl border line p-6" data-name="monsooned malabar aged funky">
+          <h3 class="font-display text-2xl">Monsooned Malabar</h3>
+          <p class="muted mt-1 text-sm">Mangalore coast · aged</p>
+          <p class="mt-4 text-sm">Low acid, heavy, a little wild. Aged in monsoon winds for twelve weeks before roasting.</p>
+          <p class="mt-5 text-sm" style="color:#B4832B">₹560 / 250g</p>
+        </article>
+      </div>
+      <p id="empty" class="muted mt-8 hidden text-sm">No coffee matches that. Try an estate name like Attikan, or clear the search.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. ROASTING ============ -->
+  <section id="roasting" class="border-t line py-20">
+    <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
+      <div>
+        <h2 class="font-display text-4xl">Roasting</h2>
+        <p class="muted mt-4 max-w-[60ch]">One drum, one roaster, one profile per lot. We cup every batch the next morning and throw out what misses.</p>
+      </div>
+      <ol class="space-y-6">
+        <li class="border-l-2 pl-5" style="border-color:#B4832B">
+          <h3 class="font-display text-xl">1. Green intake</h3>
+          <p class="muted mt-1 text-sm">Sample-roasted and scored before we commit to a bag. Moisture logged at 10–12%.</p>
+        </li>
+        <li class="border-l-2 pl-5" style="border-color:#B4832B">
+          <h3 class="font-display text-xl">2. The drum</h3>
+          <p class="muted mt-1 text-sm">4 kg batches, 11 to 14 minutes, charge temperature set by density rather than by habit.</p>
+        </li>
+        <li class="border-l-2 pl-5" style="border-color:#B4832B">
+          <h3 class="font-display text-xl">3. Rest and cup</h3>
+          <p class="muted mt-1 text-sm">Two days off-gassing, then a blind table. Roast date is printed on every bag.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 4. BREWING ============ -->
+  <section id="brewing" class="border-t line py-20">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 class="font-display text-4xl">Brewing</h2>
+      <p class="muted mt-3 max-w-[60ch]">Two recipes we hand out at the counter. Both assume freshly ground coffee and water just off the boil.</p>
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        <article class="card rounded-xl border line p-7">
+          <h3 class="font-display text-2xl">Steel filter decoction</h3>
+          <p class="muted mt-1 text-sm">20 minutes · makes 4 cups</p>
+          <p class="mt-4 text-sm">Three heaped spoons of coarse grounds, tamped lightly. Pour 120 ml of water, cover, and leave it alone. Mix the decoction 30:70 with boiled milk and sugar to taste.</p>
+        </article>
+        <article class="card rounded-xl border line p-7">
+          <h3 class="font-display text-2xl">Pour-over</h3>
+          <p class="muted mt-1 text-sm">3 minutes · makes 1 cup</p>
+          <p class="mt-4 text-sm">18 g coffee, 300 g water at 94°C. Bloom with 50 g for 40 seconds, then pour in two even stages. Aim to finish the drawdown by 2:45.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. VISIT ============ -->
+  <section id="visit" class="border-t line py-20">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2">
+      <div>
+        <h2 class="font-display text-4xl">Visit</h2>
+        <address class="muted mt-5 not-italic text-sm leading-7">
+          14 Arcot Road, Kodambakkam<br>Chennai 600024<br>
+          Open Wednesday to Sunday, 8am – 7pm<br>
+          <a href="mailto:hello@kaapiworks.in" class="underline decoration-dotted">hello@kaapiworks.in</a>
+        </address>
+      </div>
+      <form class="card rounded-xl border line p-7" onsubmit="return false">
+        <h3 class="font-display text-2xl">Ask us something</h3>
+        <label for="name" class="muted mt-5 block text-sm">Name</label>
+        <input id="name" class="mt-1 w-full rounded-lg border line bg-transparent px-3 py-2 text-sm">
+        <label for="msg" class="muted mt-4 block text-sm">Message</label>
+        <textarea id="msg" rows="3" class="mt-1 w-full rounded-lg border line bg-transparent px-3 py-2 text-sm"></textarea>
+        <button class="mt-5 rounded-full px-5 py-2.5 text-sm font-medium" style="background:#14212B;color:#F1F3EF">Send message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t line py-10">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 text-sm muted">
+    <p>© 2026 Kaapi Works, Chennai</p>
+    <nav aria-label="Footer"><a href="#home" class="hover:text-brass">Back to top</a></nav>
+  </div>
+</footer>
+
+<script>
+  const q = document.getElementById('q');
+  const cards = [...document.querySelectorAll('#grid article')];
+  const empty = document.getElementById('empty');
+  q.addEventListener('input', () => {
+    const t = q.value.trim().toLowerCase();
+    let hits = 0;
+    cards.forEach(c => {
+      const match = !t || c.dataset.name.includes(t);
+      c.hidden = !match;
+      if (match) hits++;
+    });
+    empty.classList.toggle('hidden', hits > 0);
+    if (t) document.getElementById('coffees').scrollIntoView({block:'start'});
+  });
+</script>
+</body>
+</html>
