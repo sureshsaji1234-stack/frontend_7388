@@ -31,14 +31,37 @@ tailwind.config = {
   body{background:var(--bg);color:var(--fg)}
   .muted{color:var(--muted)} .line{border-color:var(--line)} .card{background:var(--card)}
   :focus-visible{outline:2px solid #B4832B;outline-offset:3px;border-radius:2px}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .coffee-card{transition:none!important}}
+
+  /* card hover: lift + brass edge + slightly darker surface, one consistent treatment */
+  .coffee-card{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
+  .coffee-card:hover{transform:translateY(-4px); border-color:#B4832B; box-shadow:0 14px 30px -18px rgba(20,33,43,.35);}
+  .coffee-card:hover .price{color:#B4832B}
+
+  /* trending strip cards */
+  .trend-card{transition:transform .18s ease, box-shadow .18s ease;}
+  .trend-card:hover{transform:translateY(-4px); box-shadow:0 16px 34px -20px rgba(20,33,43,.4);}
+
+  /* wide-desktop / TV scaling: the 6xl (72rem) container feels lost on very large panels */
+  @media (min-width:1600px){
+    .container-page{max-width:96rem;}
+    body{font-size:1.08rem;}
+  }
+  @media (min-width:2200px){
+    .container-page{max-width:112rem;}
+    body{font-size:1.2rem;}
+  }
+  /* small phones */
+  @media (max-width:380px){
+    h1{font-size:2.4rem!important;}
+  }
 </style>
 </head>
 <body class="font-body antialiased">
 
 <!-- ============ HEADER ============ -->
 <header class="sticky z-50 border-b line backdrop-blur" style="top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 88%,transparent)">
-  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-5 py-3">
+  <div class="container-page mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-5 py-3">
 
     <!-- Logo -->
     <a href="#home" class="flex items-center gap-2.5">
@@ -46,19 +69,20 @@ tailwind.config = {
       <span class="font-display text-xl">Kaapi Works</span>
     </a>
 
-    <!-- Search bar -->
-    <form role="search" class="order-3 w-full sm:order-none sm:w-auto sm:flex-1 sm:max-w-xs" onsubmit="return false">
+    <!-- Search bar (long) -->
+    <form role="search" class="order-3 w-full sm:order-none sm:w-auto sm:flex-1" onsubmit="return false">
       <label for="q" class="sr-only">Search coffees</label>
-      <input id="q" type="search" placeholder="Search coffees, e.g. Attikan"
-             class="w-full rounded-full border line card px-4 py-2 text-sm placeholder:text-[color:var(--muted)]">
+      <input id="q" type="search" placeholder="Search coffees, e.g. Attikan, honey, robusta" class="w-full rounded-full border line card px-5 py-2.5 text-sm placeholder:text-[color:var(--muted)]">
     </form>
 
     <!-- Nav -->
     <nav aria-label="Main">
       <ul class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
         <li><a href="#home" class="hover:text-brass">Home</a></li>
+        <li><a href="#trending" class="hover:text-brass">Trending</a></li>
         <li><a href="#coffees" class="hover:text-brass">Coffees</a></li>
         <li><a href="#roasting" class="hover:text-brass">Roasting</a></li>
+        <li><a href="#infrastructure" class="hover:text-brass">Our Setup</a></li>
         <li><a href="#brewing" class="hover:text-brass">Brewing</a></li>
         <li><a href="#visit" class="hover:text-brass">Visit</a></li>
       </ul>
@@ -68,7 +92,7 @@ tailwind.config = {
 
 <main>
   <!-- ============ 1. HERO ============ -->
-  <section id="home" class="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+  <section id="home" class="container-page mx-auto max-w-6xl px-5 py-20 sm:py-28">
     <p class="muted text-sm">Roasted Tuesdays in Kodambakkam</p>
     <h1 class="mt-4 font-display text-5xl leading-[1.05] sm:text-7xl">Coffee that still<br>tastes like the hill<br>it grew on.</h1>
     <p class="muted mt-6 max-w-[60ch] text-lg">We buy from twelve estates across the Western Ghats, roast in 4&nbsp;kg batches, and ship within three days of the roast date. Nothing sits on a shelf.</p>
@@ -78,56 +102,120 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- ============ 2. COFFEES ============ -->
+  <!-- ============ 2. TRENDING ============ -->
+  <section id="trending" class="border-t line py-20">
+    <div class="container-page mx-auto max-w-6xl px-5">
+      <h2 class="font-display text-4xl">Trending this month</h2>
+      <p class="muted mt-3 max-w-[60ch]">What the counter is pouring most, ranked by 250g bags sold in the last four weeks.</p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="trend-card rounded-xl border line card p-6">
+          <p class="text-sm" style="color:#B4832B">No. 1 this month</p>
+          <h3 class="font-display mt-1 text-2xl">Thogarihunkal</h3>
+          <p class="muted mt-1 text-sm">Chikmagalur · honey process</p>
+          <p class="mt-4 text-sm">Jasmine and stone fruit. Sells out within a week of every roast.</p>
+        </article>
+        <article class="trend-card rounded-xl border line card p-6">
+          <p class="text-sm" style="color:#B4832B">No. 2 this month</p>
+          <h3 class="font-display mt-1 text-2xl">Attikan Estate</h3>
+          <p class="muted mt-1 text-sm">Chikmagalur · washed</p>
+          <p class="mt-4 text-sm">Our steadiest seller — dark chocolate and clove, easy for any brew method.</p>
+        </article>
+        <article class="trend-card rounded-xl border line card p-6">
+          <p class="text-sm" style="color:#B4832B">No. 3 this month</p>
+          <h3 class="font-display mt-1 text-2xl">Manjarabad Reserve</h3>
+          <p class="muted mt-1 text-sm">Sakleshpur · anaerobic natural</p>
+          <p class="mt-4 text-sm">New this quarter. Tamarind and dried fig, a talking point at the counter.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. COFFEES ============ -->
   <section id="coffees" class="border-t line py-20">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="container-page mx-auto max-w-6xl px-5">
       <h2 class="font-display text-4xl">Coffees</h2>
-      <p class="muted mt-3 max-w-[60ch]">Six lots on the bench right now. Use the search box above to narrow them down.</p>
+      <p class="muted mt-3 max-w-[60ch]">Twelve lots on the bench right now. Use the search box above to narrow them down.</p>
       <div id="grid" class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="card rounded-xl border line p-6" data-name="attikan estate chikmagalur chocolate">
+        <article class="coffee-card card rounded-xl border line p-6" data-name="attikan estate chikmagalur chocolate washed">
           <h3 class="font-display text-2xl">Attikan Estate</h3>
           <p class="muted mt-1 text-sm">Chikmagalur · washed</p>
           <p class="mt-4 text-sm">Dark chocolate, clove, a long sweet finish. The one we give people who say they don't like filter coffee.</p>
-          <p class="mt-5 text-sm" style="color:#B4832B">₹640 / 250g</p>
+          <p class="price mt-5 text-sm">₹640 / 250g</p>
         </article>
-        <article class="card rounded-xl border line p-6" data-name="ratnagiri peaberry citrus">
+        <article class="coffee-card card rounded-xl border line p-6" data-name="ratnagiri peaberry citrus natural">
           <h3 class="font-display text-2xl">Ratnagiri Peaberry</h3>
           <p class="muted mt-1 text-sm">Baba Budangiri · natural</p>
           <p class="mt-4 text-sm">Orange peel and jaggery. Bright enough for a pour-over, sturdy enough for a decoction.</p>
-          <p class="mt-5 text-sm" style="color:#B4832B">₹720 / 250g</p>
+          <p class="price mt-5 text-sm">₹720 / 250g</p>
         </article>
-        <article class="card rounded-xl border line p-6" data-name="pearl mountain robusta strong">
+        <article class="coffee-card card rounded-xl border line p-6" data-name="pearl mountain robusta strong washed">
           <h3 class="font-display text-2xl">Pearl Mountain</h3>
           <p class="muted mt-1 text-sm">Wayanad · washed robusta</p>
           <p class="mt-4 text-sm">Built for milk. Walnut, cocoa nib, thick body that holds up to a 70:30 pour.</p>
-          <p class="mt-5 text-sm" style="color:#B4832B">₹480 / 250g</p>
+          <p class="price mt-5 text-sm">₹480 / 250g</p>
         </article>
-        <article class="card rounded-xl border line p-6" data-name="thogarihunkal honey floral">
+        <article class="coffee-card card rounded-xl border line p-6" data-name="thogarihunkal honey floral">
           <h3 class="font-display text-2xl">Thogarihunkal</h3>
           <p class="muted mt-1 text-sm">Chikmagalur · honey</p>
           <p class="mt-4 text-sm">Jasmine and stone fruit, low acidity. Our most delicate lot, and the first to sell out.</p>
-          <p class="mt-5 text-sm" style="color:#B4832B">₹810 / 250g</p>
+          <p class="price mt-5 text-sm">₹810 / 250g</p>
         </article>
-        <article class="card rounded-xl border line p-6" data-name="kalledeverapura blend house filter">
+        <article class="coffee-card card rounded-xl border line p-6" data-name="kalledeverapura blend house filter chicory">
           <h3 class="font-display text-2xl">House Filter Blend</h3>
           <p class="muted mt-1 text-sm">Three estates · 80:20 chicory</p>
           <p class="mt-4 text-sm">Our everyday decoction blend. Ground coarse for the traditional steel filter.</p>
-          <p class="mt-5 text-sm" style="color:#B4832B">₹390 / 250g</p>
+          <p class="price mt-5 text-sm">₹390 / 250g</p>
         </article>
-        <article class="card rounded-xl border line p-6" data-name="monsooned malabar aged funky">
+        <article class="coffee-card card rounded-xl border line p-6" data-name="monsooned malabar aged funky">
           <h3 class="font-display text-2xl">Monsooned Malabar</h3>
           <p class="muted mt-1 text-sm">Mangalore coast · aged</p>
           <p class="mt-4 text-sm">Low acid, heavy, a little wild. Aged in monsoon winds for twelve weeks before roasting.</p>
-          <p class="mt-5 text-sm" style="color:#B4832B">₹560 / 250g</p>
+          <p class="price mt-5 text-sm">₹560 / 250g</p>
+        </article>
+        <article class="coffee-card card rounded-xl border line p-6" data-name="manjarabad reserve anaerobic natural sakleshpur">
+          <h3 class="font-display text-2xl">Manjarabad Reserve</h3>
+          <p class="muted mt-1 text-sm">Sakleshpur · anaerobic natural</p>
+          <p class="mt-4 text-sm">Tamarind, dried fig, a faint winey edge. Small lot, limited to 40 kg a season.</p>
+          <p class="price mt-5 text-sm">₹880 / 250g</p>
+        </article>
+        <article class="coffee-card card rounded-xl border line p-6" data-name="devarayanadurga washed nutty balanced">
+          <h3 class="font-display text-2xl">Devarayanadurga</h3>
+          <p class="muted mt-1 text-sm">Tumkur hills · washed</p>
+          <p class="mt-4 text-sm">Almond and brown sugar, quiet and balanced. A good everyday cup for a filter or an AeroPress.</p>
+          <p class="price mt-5 text-sm">₹560 / 250g</p>
+        </article>
+        <article class="coffee-card card rounded-xl border line p-6" data-name="yercaud estate tamil nadu washed light">
+          <h3 class="font-display text-2xl">Yercaud Estate</h3>
+          <p class="muted mt-1 text-sm">Shevaroys, Tamil Nadu · washed</p>
+          <p class="mt-4 text-sm">Our one Tamil Nadu lot — red apple and black tea, roasted lighter than the rest of the bench.</p>
+          <p class="price mt-5 text-sm">₹700 / 250g</p>
+        </article>
+        <article class="coffee-card card rounded-xl border line p-6" data-name="kerehaklu dark roast bold chicory blend">
+          <h3 class="font-display text-2xl">Kerehaklu Dark</h3>
+          <p class="muted mt-1 text-sm">Chikmagalur · dark roast</p>
+          <p class="mt-4 text-sm">Roasted a shade past our house style for people who want it bitter and bracing, no chicory.</p>
+          <p class="price mt-5 text-sm">₹520 / 250g</p>
+        </article>
+        <article class="coffee-card card rounded-xl border line p-6" data-name="baba budangiri old chikmagalur heirloom">
+          <h3 class="font-display text-2xl">Baba Budangiri Old</h3>
+          <p class="muted mt-1 text-sm">Chikmagalur · heirloom Kent variety</p>
+          <p class="mt-4 text-sm">From the hill where coffee first arrived in India. Herbal, tea-like, historically minded.</p>
+          <p class="price mt-5 text-sm">₹760 / 250g</p>
+        </article>
+        <article class="coffee-card card rounded-xl border line p-6" data-name="wayanad robusta cherry decaf">
+          <h3 class="font-display text-2xl">Wayanad Decaf</h3>
+          <p class="muted mt-1 text-sm">Wayanad · sugarcane-process decaf</p>
+          <p class="mt-4 text-sm">Full body, cocoa and dried date, no caffeine crash for a second or third cup.</p>
+          <p class="price mt-5 text-sm">₹690 / 250g</p>
         </article>
       </div>
       <p id="empty" class="muted mt-8 hidden text-sm">No coffee matches that. Try an estate name like Attikan, or clear the search.</p>
     </div>
   </section>
 
-  <!-- ============ 3. ROASTING ============ -->
+  <!-- ============ 4. ROASTING ============ -->
   <section id="roasting" class="border-t line py-20">
-    <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
+    <div class="container-page mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-2">
       <div>
         <h2 class="font-display text-4xl">Roasting</h2>
         <p class="muted mt-4 max-w-[60ch]">One drum, one roaster, one profile per lot. We cup every batch the next morning and throw out what misses.</p>
@@ -149,9 +237,35 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- ============ 4. BREWING ============ -->
+  <!-- ============ 5. INFRASTRUCTURE ============ -->
+  <section id="infrastructure" class="border-t line py-20">
+    <div class="container-page mx-auto max-w-6xl px-5">
+      <h2 class="font-display text-4xl">Our setup</h2>
+      <p class="muted mt-3 max-w-[60ch]">Everything happens under one roof in Kodambakkam — from green bean storage to the cup you're handed at the counter.</p>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="card rounded-xl border line p-6">
+          <h3 class="font-display text-xl">Green store</h3>
+          <p class="muted mt-2 text-sm">Climate-controlled room holding six weeks of stock, humidity kept between 55–60%.</p>
+        </article>
+        <article class="card rounded-xl border line p-6">
+          <h3 class="font-display text-xl">Roasting floor</h3>
+          <p class="muted mt-2 text-sm">A single 5 kg drum roaster with a dedicated afterburner, run five days a week.</p>
+        </article>
+        <article class="card rounded-xl border line p-6">
+          <h3 class="font-display text-xl">Cupping lab</h3>
+          <p class="muted mt-2 text-sm">A twelve-seat table where every batch is scored the morning after roasting.</p>
+        </article>
+        <article class="card rounded-xl border line p-6">
+          <h3 class="font-display text-xl">Packing line</h3>
+          <p class="muted mt-2 text-sm">Hand-filled valve bags, nitrogen-flushed, sealed and labelled within an hour of cupping approval.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. BREWING ============ -->
   <section id="brewing" class="border-t line py-20">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="container-page mx-auto max-w-6xl px-5">
       <h2 class="font-display text-4xl">Brewing</h2>
       <p class="muted mt-3 max-w-[60ch]">Two recipes we hand out at the counter. Both assume freshly ground coffee and water just off the boil.</p>
       <div class="mt-10 grid gap-5 md:grid-cols-2">
@@ -169,9 +283,9 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- ============ 5. VISIT ============ -->
+  <!-- ============ 7. VISIT ============ -->
   <section id="visit" class="border-t line py-20">
-    <div class="mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2">
+    <div class="container-page mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2">
       <div>
         <h2 class="font-display text-4xl">Visit</h2>
         <address class="muted mt-5 not-italic text-sm leading-7">
@@ -194,7 +308,7 @@ tailwind.config = {
 
 <!-- ============ FOOTER ============ -->
 <footer class="border-t line py-10">
-  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 text-sm muted">
+  <div class="container-page mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 text-sm muted">
     <p>© 2026 Kaapi Works, Chennai</p>
     <nav aria-label="Footer"><a href="#home" class="hover:text-brass">Back to top</a></nav>
   </div>
