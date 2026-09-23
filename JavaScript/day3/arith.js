@@ -50,3 +50,16 @@ let valString=trainString+testString
 console.log(valString);
 
 
+
+console.log("Task One")
+let shirtPrize=1200
+let prodQuantity=3
+let deliveryCharge=100
+let totVal=shirtPrize*prodQuantity+deliveryCharge
+console.log("Total prize for your purchase is : ",totVal)
+
+console.log("Task Two")
+let employeeSalary = 30000
+let empBonus = 5000
+employeeSalary+=empBonus-2000
+console.log(employeeSalary)
