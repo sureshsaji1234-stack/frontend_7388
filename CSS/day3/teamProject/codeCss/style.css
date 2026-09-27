@@ -1,0 +1,9 @@
+.box a{
+    color: white;
+}
+.box{
+    background-color: rgb(216, 74, 8);
+}
+html{
+    background-image: url(../assets/images/Bgimg.png);
+}
