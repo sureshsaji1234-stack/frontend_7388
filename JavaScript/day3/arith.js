@@ -36,7 +36,7 @@ let secStr="con"
 console.log(firstString-secStr)
 let thirdStr="100"
 let fourthStr="55"
-let conStr=thirdStr-fourthStr
+let conStr= thirdStr-fourthStr
 console.log(conStr);
 let fifthStr="1000"
 let sixthStr="505"
@@ -63,3 +63,7 @@ let employeeSalary = 30000
 let empBonus = 5000
 employeeSalary+=empBonus-2000
 console.log(employeeSalary)
+
+let newMat="100"
+console.log(newMat*5)
+console.log(newMat/5)
