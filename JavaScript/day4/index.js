@@ -31,6 +31,31 @@ else{
     
 }
 
-for(let a=100;a>0;a--){
-    console.log(a)
+
+let evenNumb=" "
+let oddNumb=" "
+console.log("20 to 1 printing:odd and even");
+for(let a=20;a>0;a--){
+    if (a%2==0) {
+        evenNumb+=a+" "
+    }
+    else{
+        oddNumb+=a+" "
+    }
+}
+console.log("even numbers:",evenNumb);
+console.log("odd numbers:",oddNumb);
+
+
+
+
+console.log("Vote Eligibility");
+var voterAge=20
+console.log("Voter age: ",voterAge);
+
+if (voterAge>=18) {
+    console.log("Eligible to vote");
+}
+else{
+    console.log("Not eligible to vote");
 }
