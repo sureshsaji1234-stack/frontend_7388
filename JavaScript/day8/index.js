@@ -49,3 +49,17 @@ const greNum=(a,b)=>{
     }
 }
 console.log(greNum(c,d));
+
+
+let oddOne=21
+const oddOreven=(a)=>{
+    if(a%2==0){
+        return "even"
+    }
+    else{
+        return "odd"
+    }
+}
+console.log(oddOreven(oddOne));
+console.log(oddOreven(6));
+
