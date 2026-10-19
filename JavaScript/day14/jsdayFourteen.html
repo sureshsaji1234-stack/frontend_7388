@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="formVal">
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input id="userName" type="text" required></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input id="userAge" type="number" required></td>
+            </tr>
+            <tr>
+                <td><label for="completion">course Progress</label></td>
+                <td><input type="radio" name="completion" value="completed" required>completed
+                <input type="radio" name="completion" value="not completed" required>not completed</td>
+            </tr>
+        </table>
+        <button type="submit" id="btn">Submit</button>
+    
+        </form>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <th>s.No</th>
+                <th>Name</th>
+                <th>age</th>
+            </thead>
+            <tbody id="table">
+            
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
