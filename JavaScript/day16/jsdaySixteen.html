@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+</head>
+<body>
+    <h1>Employee Registration Form</h1>
+    <form id="formVal">
+        <table>
+            <tr>
+                <td><label for="userName">Employee Name</label></td>
+                <td><input id="userName" type="text" required></td>
+            </tr>
+            <tr>
+                <td><label for="userAge">Employee Age</label></td>
+                <td><input id="userAge" type="number" required></td>
+            </tr>
+            <tr>
+                <td><label for="department">Department</label></td>
+                <td><input id="department" type="text" required></td>
+            </tr>
+            <tr>
+                <td><label for="salary">Salary</label></td>
+                <td><input id="salary" type="number" required></td>
+            </tr>
+        </table>
+        <button type="submit" id="btn">Submit</button>
+    </form>
+    <h2>Employee Records</h2>
+    <table border="1" cellpadding="2">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
