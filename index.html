@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Hub & Workspace Navigator</title>
+  <!-- Tailwind CSS Current Version -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col p-4 sm:p-8 font-sans antialiased selection:bg-sky-500 selection:text-white group/app">
+  <div class="max-w-5xl w-full mx-auto flex flex-col gap-6">
+    <!-- Technology Radio Inputs (Pure HTML Interactive State) -->
+    <input type="radio" name="tech-toggle" id="tech-html" class="hidden" checked>
+    <input type="radio" name="tech-toggle" id="tech-css" class="hidden">
+    <input type="radio" name="tech-toggle" id="tech-bootstrap" class="hidden">
+    <input type="radio" name="tech-toggle" id="tech-tailwind" class="hidden">
+    <input type="radio" name="tech-toggle" id="tech-js" class="hidden">
+
+    <!-- Header -->
+    <header class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-2xl flex flex-col gap-5">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-blue-500/25 shrink-0">
+            ⚡
+          </div>
+          <div>
+            <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Frontend Hub &amp; Workspace Navigator</h1>
+            <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Interactive directory for all daily course modules and HTML tasks</p>
+          </div>
+        </div>
+        <div class="inline-flex items-center gap-3 bg-slate-800/80 border border-slate-700/60 rounded-full px-4 py-2 text-xs sm:text-sm text-slate-300 font-medium shadow-inner">
+          <span><b class="text-sky-400 font-bold">5</b> Technologies</span>
+          <span>•</span>
+          <span><b class="text-sky-400 font-bold">40</b> Day Modules</span>
+          <span>•</span>
+          <span><b class="text-sky-400 font-bold">66</b> HTML Pages</span>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- SECTION 1: Technology Selector (5 Buttons) -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+          <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">1</span>
+          <span>Select Technology</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+
+        <label for="tech-html" class="group relative flex flex-col items-start gap-2.5 p-4 sm:p-5 bg-slate-950/60 hover:bg-slate-800/70 border border-slate-800 hover:border-slate-700 rounded-xl text-left cursor-pointer transition-all duration-200 hover:-translate-y-0.5 select-none group-has-[#tech-html:checked]/app:!bg-orange-500/15 group-has-[#tech-html:checked]/app:!border-orange-500 group-has-[#tech-html:checked]/app:shadow-lg group-has-[#tech-html:checked]/app:shadow-orange-500/20">
+          <div class="flex items-center justify-between w-full">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base font-bold border bg-orange-500/15 text-orange-400 border-orange-500/30">
+              🌐
+            </div>
+            <span class="text-xs text-slate-400 font-medium">7 folders</span>
+          </div>
+          <div class="text-base font-bold text-white group-hover:text-white tracking-tight">HTML</div>
+        </label>
+        <label for="tech-css" class="group relative flex flex-col items-start gap-2.5 p-4 sm:p-5 bg-slate-950/60 hover:bg-slate-800/70 border border-slate-800 hover:border-slate-700 rounded-xl text-left cursor-pointer transition-all duration-200 hover:-translate-y-0.5 select-none group-has-[#tech-css:checked]/app:!bg-sky-500/15 group-has-[#tech-css:checked]/app:!border-sky-500 group-has-[#tech-css:checked]/app:shadow-lg group-has-[#tech-css:checked]/app:shadow-sky-500/20">
+          <div class="flex items-center justify-between w-full">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base font-bold border bg-sky-500/15 text-sky-400 border-sky-500/30">
+              🎨
+            </div>
+            <span class="text-xs text-slate-400 font-medium">10 folders</span>
+          </div>
+          <div class="text-base font-bold text-white group-hover:text-white tracking-tight">CSS</div>
+        </label>
+        <label for="tech-bootstrap" class="group relative flex flex-col items-start gap-2.5 p-4 sm:p-5 bg-slate-950/60 hover:bg-slate-800/70 border border-slate-800 hover:border-slate-700 rounded-xl text-left cursor-pointer transition-all duration-200 hover:-translate-y-0.5 select-none group-has-[#tech-bootstrap:checked]/app:!bg-purple-500/15 group-has-[#tech-bootstrap:checked]/app:!border-purple-500 group-has-[#tech-bootstrap:checked]/app:shadow-lg group-has-[#tech-bootstrap:checked]/app:shadow-purple-500/20">
+          <div class="flex items-center justify-between w-full">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base font-bold border bg-purple-500/15 text-purple-400 border-purple-500/30">
+              🅱️
+            </div>
+            <span class="text-xs text-slate-400 font-medium">2 folders</span>
+          </div>
+          <div class="text-base font-bold text-white group-hover:text-white tracking-tight">BootStrap</div>
+        </label>
+        <label for="tech-tailwind" class="group relative flex flex-col items-start gap-2.5 p-4 sm:p-5 bg-slate-950/60 hover:bg-slate-800/70 border border-slate-800 hover:border-slate-700 rounded-xl text-left cursor-pointer transition-all duration-200 hover:-translate-y-0.5 select-none group-has-[#tech-tailwind:checked]/app:!bg-cyan-500/15 group-has-[#tech-tailwind:checked]/app:!border-cyan-500 group-has-[#tech-tailwind:checked]/app:shadow-lg group-has-[#tech-tailwind:checked]/app:shadow-cyan-500/20">
+          <div class="flex items-center justify-between w-full">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base font-bold border bg-cyan-500/15 text-cyan-400 border-cyan-500/30">
+              💨
+            </div>
+            <span class="text-xs text-slate-400 font-medium">2 folders</span>
+          </div>
+          <div class="text-base font-bold text-white group-hover:text-white tracking-tight">TailwindCSS</div>
+        </label>
+        <label for="tech-js" class="group relative flex flex-col items-start gap-2.5 p-4 sm:p-5 bg-slate-950/60 hover:bg-slate-800/70 border border-slate-800 hover:border-slate-700 rounded-xl text-left cursor-pointer transition-all duration-200 hover:-translate-y-0.5 select-none group-has-[#tech-js:checked]/app:!bg-amber-500/15 group-has-[#tech-js:checked]/app:!border-amber-500 group-has-[#tech-js:checked]/app:shadow-lg group-has-[#tech-js:checked]/app:shadow-amber-500/20">
+          <div class="flex items-center justify-between w-full">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-base font-bold border bg-amber-500/15 text-amber-400 border-amber-500/30">
+              ⚡
+            </div>
+            <span class="text-xs text-slate-400 font-medium">19 folders</span>
+          </div>
+          <div class="text-base font-bold text-white group-hover:text-white tracking-tight">JavaScript</div>
+        </label>
+      </div>
+    </div>
+
+    <!-- ==================== HTML SECTIONS (2 & 3) ==================== -->
+    <div class="hidden group-has-[#tech-html:checked]/app:flex flex-col gap-6 group/html">
+      <!-- Day Radio Inputs for HTML -->
+      <input type="radio" name="html-day" id="html-day-1" class="hidden" checked>
+      <input type="radio" name="html-day" id="html-day-2" class="hidden">
+      <input type="radio" name="html-day" id="html-day-3" class="hidden">
+      <input type="radio" name="html-day" id="html-day-4" class="hidden">
+      <input type="radio" name="html-day" id="html-day-5" class="hidden">
+      <input type="radio" name="html-day" id="html-day-6" class="hidden">
+      <input type="radio" name="html-day" id="html-day-7" class="hidden">
+
+      <!-- SECTION 2: HTML Day Folders -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">2</span>
+            <span>HTML Day Folders (7 Folders)</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <label for="html-day-1" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-1:checked]/html:!bg-blue-600 group-has-[#html-day-1:checked]/html:!border-blue-400 group-has-[#html-day-1:checked]/html:!text-white group-has-[#html-day-1:checked]/html:shadow-lg group-has-[#html-day-1:checked]/html:shadow-blue-500/30">
+            <span>Day_1</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-1:checked]/html:bg-white/20 group-has-[#html-day-1:checked]/html:text-white">1 file</span>
+          </label>
+          <label for="html-day-2" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-2:checked]/html:!bg-blue-600 group-has-[#html-day-2:checked]/html:!border-blue-400 group-has-[#html-day-2:checked]/html:!text-white group-has-[#html-day-2:checked]/html:shadow-lg group-has-[#html-day-2:checked]/html:shadow-blue-500/30">
+            <span>Day_2</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-2:checked]/html:bg-white/20 group-has-[#html-day-2:checked]/html:text-white">1 file</span>
+          </label>
+          <label for="html-day-3" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-3:checked]/html:!bg-blue-600 group-has-[#html-day-3:checked]/html:!border-blue-400 group-has-[#html-day-3:checked]/html:!text-white group-has-[#html-day-3:checked]/html:shadow-lg group-has-[#html-day-3:checked]/html:shadow-blue-500/30">
+            <span>Day_3</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-3:checked]/html:bg-white/20 group-has-[#html-day-3:checked]/html:text-white">4 files</span>
+          </label>
+          <label for="html-day-4" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-4:checked]/html:!bg-blue-600 group-has-[#html-day-4:checked]/html:!border-blue-400 group-has-[#html-day-4:checked]/html:!text-white group-has-[#html-day-4:checked]/html:shadow-lg group-has-[#html-day-4:checked]/html:shadow-blue-500/30">
+            <span>Day_4</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-4:checked]/html:bg-white/20 group-has-[#html-day-4:checked]/html:text-white">5 files</span>
+          </label>
+          <label for="html-day-5" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-5:checked]/html:!bg-blue-600 group-has-[#html-day-5:checked]/html:!border-blue-400 group-has-[#html-day-5:checked]/html:!text-white group-has-[#html-day-5:checked]/html:shadow-lg group-has-[#html-day-5:checked]/html:shadow-blue-500/30">
+            <span>Day_5</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-5:checked]/html:bg-white/20 group-has-[#html-day-5:checked]/html:text-white">2 files</span>
+          </label>
+          <label for="html-day-6" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-6:checked]/html:!bg-blue-600 group-has-[#html-day-6:checked]/html:!border-blue-400 group-has-[#html-day-6:checked]/html:!text-white group-has-[#html-day-6:checked]/html:shadow-lg group-has-[#html-day-6:checked]/html:shadow-blue-500/30">
+            <span>Day_6</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-6:checked]/html:bg-white/20 group-has-[#html-day-6:checked]/html:text-white">4 files</span>
+          </label>
+          <label for="html-day-7" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#html-day-7:checked]/html:!bg-blue-600 group-has-[#html-day-7:checked]/html:!border-blue-400 group-has-[#html-day-7:checked]/html:!text-white group-has-[#html-day-7:checked]/html:shadow-lg group-has-[#html-day-7:checked]/html:shadow-blue-500/30">
+            <span>Day_7</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#html-day-7:checked]/html:bg-white/20 group-has-[#html-day-7:checked]/html:text-white">1 file</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION 3: HTML Links for HTML -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">3</span>
+            <span>HTML Pages in Selected Day</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+            <span>Workspace</span> &gt; <span>HTML</span> &gt; <span class="text-sky-400 font-semibold">Active Day</span>
+          </div>
+        </div>
+
+        <!-- Files for HTML / Day_1 -->
+        <div class="hidden group-has-[#html-day-1:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_1/HTML_Intro.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">HTML_Intro.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_1/HTML_Intro.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for HTML / Day_2 -->
+        <div class="hidden group-has-[#html-day-2:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_2/ShortStory.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">ShortStory.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_2/ShortStory.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for HTML / Day_3 -->
+        <div class="hidden group-has-[#html-day-3:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_3/AboutMe.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">AboutMe.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_3/AboutMe.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_3/Blog.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">Blog.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_3/Blog.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_3/Product.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">Product.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_3/Product.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_3/StudentDetails.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">StudentDetails.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_3/StudentDetails.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for HTML / Day_4 -->
+        <div class="hidden group-has-[#html-day-4:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_4/ProdDetail.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">ProdDetail.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_4/ProdDetail.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_4/StudentPage.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">StudentPage.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_4/StudentPage.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_4/MyWebsite/about.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">about.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">MyWebsite/about.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_4/MyWebsite/contact.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">contact.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">MyWebsite/contact.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_4/MyWebsite/index.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">index.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">MyWebsite/index.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for HTML / Day_5 -->
+        <div class="hidden group-has-[#html-day-5:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_5/studentForm.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">studentForm.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_5/studentForm.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_5/studentTable.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">studentTable.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_5/studentTable.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for HTML / Day_6 -->
+        <div class="hidden group-has-[#html-day-6:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_6/compwebpage.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">compwebpage.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_6/compwebpage.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_6/metaData.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">metaData.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_6/metaData.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_6/multilingual.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">multilingual.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_6/multilingual.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="HTML/Day_6/portfolio.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">portfolio.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_6/portfolio.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for HTML / Day_7 -->
+        <div class="hidden group-has-[#html-day-7:checked]/html:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="HTML/Day_7/Complete.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">Complete.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">HTML/Day_7/Complete.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CSS SECTIONS (2 & 3) ==================== -->
+    <div class="hidden group-has-[#tech-css:checked]/app:flex flex-col gap-6 group/css">
+      <!-- Day Radio Inputs for CSS -->
+      <input type="radio" name="css-day" id="css-day1" class="hidden" checked>
+      <input type="radio" name="css-day" id="css-day2" class="hidden">
+      <input type="radio" name="css-day" id="css-day3" class="hidden">
+      <input type="radio" name="css-day" id="css-day4" class="hidden">
+      <input type="radio" name="css-day" id="css-day5" class="hidden">
+      <input type="radio" name="css-day" id="css-day6" class="hidden">
+      <input type="radio" name="css-day" id="css-day7" class="hidden">
+      <input type="radio" name="css-day" id="css-day8" class="hidden">
+      <input type="radio" name="css-day" id="css-day9" class="hidden">
+      <input type="radio" name="css-day" id="css-day10" class="hidden">
+
+      <!-- SECTION 2: CSS Day Folders -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">2</span>
+            <span>CSS Day Folders (10 Folders)</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <label for="css-day1" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day1:checked]/css:!bg-blue-600 group-has-[#css-day1:checked]/css:!border-blue-400 group-has-[#css-day1:checked]/css:!text-white group-has-[#css-day1:checked]/css:shadow-lg group-has-[#css-day1:checked]/css:shadow-blue-500/30">
+            <span>day1</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day1:checked]/css:bg-white/20 group-has-[#css-day1:checked]/css:text-white">1 file</span>
+          </label>
+          <label for="css-day2" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day2:checked]/css:!bg-blue-600 group-has-[#css-day2:checked]/css:!border-blue-400 group-has-[#css-day2:checked]/css:!text-white group-has-[#css-day2:checked]/css:shadow-lg group-has-[#css-day2:checked]/css:shadow-blue-500/30">
+            <span>day2</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day2:checked]/css:bg-white/20 group-has-[#css-day2:checked]/css:text-white">1 file</span>
+          </label>
+          <label for="css-day3" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day3:checked]/css:!bg-blue-600 group-has-[#css-day3:checked]/css:!border-blue-400 group-has-[#css-day3:checked]/css:!text-white group-has-[#css-day3:checked]/css:shadow-lg group-has-[#css-day3:checked]/css:shadow-blue-500/30">
+            <span>day3</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day3:checked]/css:bg-white/20 group-has-[#css-day3:checked]/css:text-white">5 files</span>
+          </label>
+          <label for="css-day4" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day4:checked]/css:!bg-blue-600 group-has-[#css-day4:checked]/css:!border-blue-400 group-has-[#css-day4:checked]/css:!text-white group-has-[#css-day4:checked]/css:shadow-lg group-has-[#css-day4:checked]/css:shadow-blue-500/30">
+            <span>day4</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day4:checked]/css:bg-white/20 group-has-[#css-day4:checked]/css:text-white">4 files</span>
+          </label>
+          <label for="css-day5" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day5:checked]/css:!bg-blue-600 group-has-[#css-day5:checked]/css:!border-blue-400 group-has-[#css-day5:checked]/css:!text-white group-has-[#css-day5:checked]/css:shadow-lg group-has-[#css-day5:checked]/css:shadow-blue-500/30">
+            <span>day5</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day5:checked]/css:bg-white/20 group-has-[#css-day5:checked]/css:text-white">3 files</span>
+          </label>
+          <label for="css-day6" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day6:checked]/css:!bg-blue-600 group-has-[#css-day6:checked]/css:!border-blue-400 group-has-[#css-day6:checked]/css:!text-white group-has-[#css-day6:checked]/css:shadow-lg group-has-[#css-day6:checked]/css:shadow-blue-500/30">
+            <span>day6</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day6:checked]/css:bg-white/20 group-has-[#css-day6:checked]/css:text-white">2 files</span>
+          </label>
+          <label for="css-day7" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day7:checked]/css:!bg-blue-600 group-has-[#css-day7:checked]/css:!border-blue-400 group-has-[#css-day7:checked]/css:!text-white group-has-[#css-day7:checked]/css:shadow-lg group-has-[#css-day7:checked]/css:shadow-blue-500/30">
+            <span>day7</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day7:checked]/css:bg-white/20 group-has-[#css-day7:checked]/css:text-white">2 files</span>
+          </label>
+          <label for="css-day8" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day8:checked]/css:!bg-blue-600 group-has-[#css-day8:checked]/css:!border-blue-400 group-has-[#css-day8:checked]/css:!text-white group-has-[#css-day8:checked]/css:shadow-lg group-has-[#css-day8:checked]/css:shadow-blue-500/30">
+            <span>day8</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day8:checked]/css:bg-white/20 group-has-[#css-day8:checked]/css:text-white">1 file</span>
+          </label>
+          <label for="css-day9" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day9:checked]/css:!bg-blue-600 group-has-[#css-day9:checked]/css:!border-blue-400 group-has-[#css-day9:checked]/css:!text-white group-has-[#css-day9:checked]/css:shadow-lg group-has-[#css-day9:checked]/css:shadow-blue-500/30">
+            <span>day9</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day9:checked]/css:bg-white/20 group-has-[#css-day9:checked]/css:text-white">2 files</span>
+          </label>
+          <label for="css-day10" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#css-day10:checked]/css:!bg-blue-600 group-has-[#css-day10:checked]/css:!border-blue-400 group-has-[#css-day10:checked]/css:!text-white group-has-[#css-day10:checked]/css:shadow-lg group-has-[#css-day10:checked]/css:shadow-blue-500/30">
+            <span>day10</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#css-day10:checked]/css:bg-white/20 group-has-[#css-day10:checked]/css:text-white">1 file</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION 3: HTML Links for CSS -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">3</span>
+            <span>HTML Pages in Selected Day</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+            <span>Workspace</span> &gt; <span>CSS</span> &gt; <span class="text-sky-400 font-semibold">Active Day</span>
+          </div>
+        </div>
+
+        <!-- Files for CSS / day1 -->
+        <div class="hidden group-has-[#css-day1:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day1/start.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">start.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day1/start.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day2 -->
+        <div class="hidden group-has-[#css-day2:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day2/asdf.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">asdf.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day2/asdf.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day3 -->
+        <div class="hidden group-has-[#css-day3:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day3/teamProject/codeCss/about.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">about.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">teamProject/codeCss/about.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day3/teamProject/codeCss/challenges.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">challenges.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">teamProject/codeCss/challenges.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day3/teamProject/codeCss/contact.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">contact.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">teamProject/codeCss/contact.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day3/teamProject/codeCss/Index.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">Index.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">teamProject/codeCss/Index.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day3/teamProject/codeCss/solution.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">solution.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">teamProject/codeCss/solution.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day4 -->
+        <div class="hidden group-has-[#css-day4:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day4/taskfour.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">taskfour.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day4/taskfour.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day4/taskOne.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">taskOne.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day4/taskOne.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day4/taskThree.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">taskThree.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day4/taskThree.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day4/taskTwo.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">taskTwo.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day4/taskTwo.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day5 -->
+        <div class="hidden group-has-[#css-day5:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day5/flexone.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">flexone.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day5/flexone.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day5/flexThree.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">flexThree.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day5/flexThree.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day5/flexTwo.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">flexTwo.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day5/flexTwo.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day6 -->
+        <div class="hidden group-has-[#css-day6:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day6/flexModel.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">flexModel.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day6/flexModel.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day6/Zindex.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">Zindex.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day6/Zindex.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day7 -->
+        <div class="hidden group-has-[#css-day7:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day7/task1.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">task1.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day7/task1.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day7/task3.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">task3.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day7/task3.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day8 -->
+        <div class="hidden group-has-[#css-day8:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day8/gridprog.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">gridprog.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day8/gridprog.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day9 -->
+        <div class="hidden group-has-[#css-day9:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day9/codes/htmlcode/index.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">index.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">codes/htmlcode/index.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="CSS/day9/Website/process/mainprog.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">mainprog.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">Website/process/mainprog.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for CSS / day10 -->
+        <div class="hidden group-has-[#css-day10:checked]/css:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="CSS/day10/rem.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">rem.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">CSS/day10/rem.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== BOOTSTRAP SECTIONS (2 & 3) ==================== -->
+    <div class="hidden group-has-[#tech-bootstrap:checked]/app:flex flex-col gap-6 group/bootstrap">
+      <!-- Day Radio Inputs for BootStrap -->
+      <input type="radio" name="bootstrap-day" id="bootstrap-day1" class="hidden" checked>
+      <input type="radio" name="bootstrap-day" id="bootstrap-day2" class="hidden">
+
+      <!-- SECTION 2: BootStrap Day Folders -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">2</span>
+            <span>BootStrap Day Folders (2 Folders)</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <label for="bootstrap-day1" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#bootstrap-day1:checked]/bootstrap:!bg-blue-600 group-has-[#bootstrap-day1:checked]/bootstrap:!border-blue-400 group-has-[#bootstrap-day1:checked]/bootstrap:!text-white group-has-[#bootstrap-day1:checked]/bootstrap:shadow-lg group-has-[#bootstrap-day1:checked]/bootstrap:shadow-blue-500/30">
+            <span>day1</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#bootstrap-day1:checked]/bootstrap:bg-white/20 group-has-[#bootstrap-day1:checked]/bootstrap:text-white">1 file</span>
+          </label>
+          <label for="bootstrap-day2" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#bootstrap-day2:checked]/bootstrap:!bg-blue-600 group-has-[#bootstrap-day2:checked]/bootstrap:!border-blue-400 group-has-[#bootstrap-day2:checked]/bootstrap:!text-white group-has-[#bootstrap-day2:checked]/bootstrap:shadow-lg group-has-[#bootstrap-day2:checked]/bootstrap:shadow-blue-500/30">
+            <span>day2</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#bootstrap-day2:checked]/bootstrap:bg-white/20 group-has-[#bootstrap-day2:checked]/bootstrap:text-white">1 file</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION 3: HTML Links for BootStrap -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">3</span>
+            <span>HTML Pages in Selected Day</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+            <span>Workspace</span> &gt; <span>BootStrap</span> &gt; <span class="text-sky-400 font-semibold">Active Day</span>
+          </div>
+        </div>
+
+        <!-- Files for BootStrap / day1 -->
+        <div class="hidden group-has-[#bootstrap-day1:checked]/bootstrap:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="BootStrap/day1/bootdayone.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">bootdayone.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">BootStrap/day1/bootdayone.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for BootStrap / day2 -->
+        <div class="hidden group-has-[#bootstrap-day2:checked]/bootstrap:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="BootStrap/day2/sample.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">sample.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">BootStrap/day2/sample.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAILWINDCSS SECTIONS (2 & 3) ==================== -->
+    <div class="hidden group-has-[#tech-tailwind:checked]/app:flex flex-col gap-6 group/tailwind">
+      <!-- Day Radio Inputs for TailwindCSS -->
+      <input type="radio" name="tailwind-day" id="tailwind-day3" class="hidden" checked>
+      <input type="radio" name="tailwind-day" id="tailwind-day4" class="hidden">
+
+      <!-- SECTION 2: TailwindCSS Day Folders -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">2</span>
+            <span>TailwindCSS Day Folders (2 Folders)</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <label for="tailwind-day3" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#tailwind-day3:checked]/tailwind:!bg-blue-600 group-has-[#tailwind-day3:checked]/tailwind:!border-blue-400 group-has-[#tailwind-day3:checked]/tailwind:!text-white group-has-[#tailwind-day3:checked]/tailwind:shadow-lg group-has-[#tailwind-day3:checked]/tailwind:shadow-blue-500/30">
+            <span>Day3</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#tailwind-day3:checked]/tailwind:bg-white/20 group-has-[#tailwind-day3:checked]/tailwind:text-white">1 file</span>
+          </label>
+          <label for="tailwind-day4" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#tailwind-day4:checked]/tailwind:!bg-blue-600 group-has-[#tailwind-day4:checked]/tailwind:!border-blue-400 group-has-[#tailwind-day4:checked]/tailwind:!text-white group-has-[#tailwind-day4:checked]/tailwind:shadow-lg group-has-[#tailwind-day4:checked]/tailwind:shadow-blue-500/30">
+            <span>Day4</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#tailwind-day4:checked]/tailwind:bg-white/20 group-has-[#tailwind-day4:checked]/tailwind:text-white">1 file</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION 3: HTML Links for TailwindCSS -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">3</span>
+            <span>HTML Pages in Selected Day</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+            <span>Workspace</span> &gt; <span>TailwindCSS</span> &gt; <span class="text-sky-400 font-semibold">Active Day</span>
+          </div>
+        </div>
+
+        <!-- Files for TailwindCSS / Day3 -->
+        <div class="hidden group-has-[#tailwind-day3:checked]/tailwind:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="TailwindCSS/Day3/tailone.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">tailone.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">TailwindCSS/Day3/tailone.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for TailwindCSS / Day4 -->
+        <div class="hidden group-has-[#tailwind-day4:checked]/tailwind:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="TailwindCSS/Day4/index.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">index.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">TailwindCSS/Day4/index.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT SECTIONS (2 & 3) ==================== -->
+    <div class="hidden group-has-[#tech-js:checked]/app:flex flex-col gap-6 group/js">
+      <!-- Day Radio Inputs for JavaScript -->
+      <input type="radio" name="js-day" id="js-day1" class="hidden" checked>
+      <input type="radio" name="js-day" id="js-day2" class="hidden">
+      <input type="radio" name="js-day" id="js-day3" class="hidden">
+      <input type="radio" name="js-day" id="js-day4" class="hidden">
+      <input type="radio" name="js-day" id="js-day5" class="hidden">
+      <input type="radio" name="js-day" id="js-day6" class="hidden">
+      <input type="radio" name="js-day" id="js-day7" class="hidden">
+      <input type="radio" name="js-day" id="js-day8" class="hidden">
+      <input type="radio" name="js-day" id="js-day9" class="hidden">
+      <input type="radio" name="js-day" id="js-day10" class="hidden">
+      <input type="radio" name="js-day" id="js-day11" class="hidden">
+      <input type="radio" name="js-day" id="js-day12" class="hidden">
+      <input type="radio" name="js-day" id="js-day13" class="hidden">
+      <input type="radio" name="js-day" id="js-day14" class="hidden">
+      <input type="radio" name="js-day" id="js-day15" class="hidden">
+      <input type="radio" name="js-day" id="js-day16" class="hidden">
+      <input type="radio" name="js-day" id="js-day17" class="hidden">
+      <input type="radio" name="js-day" id="js-day18" class="hidden">
+      <input type="radio" name="js-day" id="js-day19" class="hidden">
+
+      <!-- SECTION 2: JavaScript Day Folders -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">2</span>
+            <span>JavaScript Day Folders (19 Folders)</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <label for="js-day1" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day1:checked]/js:!bg-blue-600 group-has-[#js-day1:checked]/js:!border-blue-400 group-has-[#js-day1:checked]/js:!text-white group-has-[#js-day1:checked]/js:shadow-lg group-has-[#js-day1:checked]/js:shadow-blue-500/30">
+            <span>day1</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day1:checked]/js:bg-white/20 group-has-[#js-day1:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day2" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day2:checked]/js:!bg-blue-600 group-has-[#js-day2:checked]/js:!border-blue-400 group-has-[#js-day2:checked]/js:!text-white group-has-[#js-day2:checked]/js:shadow-lg group-has-[#js-day2:checked]/js:shadow-blue-500/30">
+            <span>day2</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day2:checked]/js:bg-white/20 group-has-[#js-day2:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day3" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day3:checked]/js:!bg-blue-600 group-has-[#js-day3:checked]/js:!border-blue-400 group-has-[#js-day3:checked]/js:!text-white group-has-[#js-day3:checked]/js:shadow-lg group-has-[#js-day3:checked]/js:shadow-blue-500/30">
+            <span>day3</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day3:checked]/js:bg-white/20 group-has-[#js-day3:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day4" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day4:checked]/js:!bg-blue-600 group-has-[#js-day4:checked]/js:!border-blue-400 group-has-[#js-day4:checked]/js:!text-white group-has-[#js-day4:checked]/js:shadow-lg group-has-[#js-day4:checked]/js:shadow-blue-500/30">
+            <span>day4</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day4:checked]/js:bg-white/20 group-has-[#js-day4:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day5" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day5:checked]/js:!bg-blue-600 group-has-[#js-day5:checked]/js:!border-blue-400 group-has-[#js-day5:checked]/js:!text-white group-has-[#js-day5:checked]/js:shadow-lg group-has-[#js-day5:checked]/js:shadow-blue-500/30">
+            <span>day5</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day5:checked]/js:bg-white/20 group-has-[#js-day5:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day6" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day6:checked]/js:!bg-blue-600 group-has-[#js-day6:checked]/js:!border-blue-400 group-has-[#js-day6:checked]/js:!text-white group-has-[#js-day6:checked]/js:shadow-lg group-has-[#js-day6:checked]/js:shadow-blue-500/30">
+            <span>day6</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day6:checked]/js:bg-white/20 group-has-[#js-day6:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day7" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day7:checked]/js:!bg-blue-600 group-has-[#js-day7:checked]/js:!border-blue-400 group-has-[#js-day7:checked]/js:!text-white group-has-[#js-day7:checked]/js:shadow-lg group-has-[#js-day7:checked]/js:shadow-blue-500/30">
+            <span>day7</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day7:checked]/js:bg-white/20 group-has-[#js-day7:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day8" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day8:checked]/js:!bg-blue-600 group-has-[#js-day8:checked]/js:!border-blue-400 group-has-[#js-day8:checked]/js:!text-white group-has-[#js-day8:checked]/js:shadow-lg group-has-[#js-day8:checked]/js:shadow-blue-500/30">
+            <span>day8</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day8:checked]/js:bg-white/20 group-has-[#js-day8:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day9" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day9:checked]/js:!bg-blue-600 group-has-[#js-day9:checked]/js:!border-blue-400 group-has-[#js-day9:checked]/js:!text-white group-has-[#js-day9:checked]/js:shadow-lg group-has-[#js-day9:checked]/js:shadow-blue-500/30">
+            <span>day9</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day9:checked]/js:bg-white/20 group-has-[#js-day9:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day10" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day10:checked]/js:!bg-blue-600 group-has-[#js-day10:checked]/js:!border-blue-400 group-has-[#js-day10:checked]/js:!text-white group-has-[#js-day10:checked]/js:shadow-lg group-has-[#js-day10:checked]/js:shadow-blue-500/30">
+            <span>day10</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day10:checked]/js:bg-white/20 group-has-[#js-day10:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day11" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day11:checked]/js:!bg-blue-600 group-has-[#js-day11:checked]/js:!border-blue-400 group-has-[#js-day11:checked]/js:!text-white group-has-[#js-day11:checked]/js:shadow-lg group-has-[#js-day11:checked]/js:shadow-blue-500/30">
+            <span>day11</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day11:checked]/js:bg-white/20 group-has-[#js-day11:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day12" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day12:checked]/js:!bg-blue-600 group-has-[#js-day12:checked]/js:!border-blue-400 group-has-[#js-day12:checked]/js:!text-white group-has-[#js-day12:checked]/js:shadow-lg group-has-[#js-day12:checked]/js:shadow-blue-500/30">
+            <span>day12</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day12:checked]/js:bg-white/20 group-has-[#js-day12:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day13" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day13:checked]/js:!bg-blue-600 group-has-[#js-day13:checked]/js:!border-blue-400 group-has-[#js-day13:checked]/js:!text-white group-has-[#js-day13:checked]/js:shadow-lg group-has-[#js-day13:checked]/js:shadow-blue-500/30">
+            <span>day13</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day13:checked]/js:bg-white/20 group-has-[#js-day13:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day14" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day14:checked]/js:!bg-blue-600 group-has-[#js-day14:checked]/js:!border-blue-400 group-has-[#js-day14:checked]/js:!text-white group-has-[#js-day14:checked]/js:shadow-lg group-has-[#js-day14:checked]/js:shadow-blue-500/30">
+            <span>day14</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day14:checked]/js:bg-white/20 group-has-[#js-day14:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day15" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day15:checked]/js:!bg-blue-600 group-has-[#js-day15:checked]/js:!border-blue-400 group-has-[#js-day15:checked]/js:!text-white group-has-[#js-day15:checked]/js:shadow-lg group-has-[#js-day15:checked]/js:shadow-blue-500/30">
+            <span>day15</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day15:checked]/js:bg-white/20 group-has-[#js-day15:checked]/js:text-white">2 files</span>
+          </label>
+          <label for="js-day16" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day16:checked]/js:!bg-blue-600 group-has-[#js-day16:checked]/js:!border-blue-400 group-has-[#js-day16:checked]/js:!text-white group-has-[#js-day16:checked]/js:shadow-lg group-has-[#js-day16:checked]/js:shadow-blue-500/30">
+            <span>day16</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day16:checked]/js:bg-white/20 group-has-[#js-day16:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day17" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day17:checked]/js:!bg-blue-600 group-has-[#js-day17:checked]/js:!border-blue-400 group-has-[#js-day17:checked]/js:!text-white group-has-[#js-day17:checked]/js:shadow-lg group-has-[#js-day17:checked]/js:shadow-blue-500/30">
+            <span>day17</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day17:checked]/js:bg-white/20 group-has-[#js-day17:checked]/js:text-white">3 files</span>
+          </label>
+          <label for="js-day18" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day18:checked]/js:!bg-blue-600 group-has-[#js-day18:checked]/js:!border-blue-400 group-has-[#js-day18:checked]/js:!text-white group-has-[#js-day18:checked]/js:shadow-lg group-has-[#js-day18:checked]/js:shadow-blue-500/30">
+            <span>day18</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day18:checked]/js:bg-white/20 group-has-[#js-day18:checked]/js:text-white">1 file</span>
+          </label>
+          <label for="js-day19" class="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-lg text-sm font-semibold text-slate-200 cursor-pointer transition-all duration-150 hover:-translate-y-0.5 select-none group-has-[#js-day19:checked]/js:!bg-blue-600 group-has-[#js-day19:checked]/js:!border-blue-400 group-has-[#js-day19:checked]/js:!text-white group-has-[#js-day19:checked]/js:shadow-lg group-has-[#js-day19:checked]/js:shadow-blue-500/30">
+            <span>day19</span>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-white/10 text-slate-300 font-medium group-has-[#js-day19:checked]/js:bg-white/20 group-has-[#js-day19:checked]/js:text-white">1 file</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SECTION 3: HTML Links for JavaScript -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xl flex flex-col gap-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-700 inline-flex items-center justify-center text-xs text-sky-400 font-extrabold">3</span>
+            <span>HTML Pages in Selected Day</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+            <span>Workspace</span> &gt; <span>JavaScript</span> &gt; <span class="text-sky-400 font-semibold">Active Day</span>
+          </div>
+        </div>
+
+        <!-- Files for JavaScript / day1 -->
+        <div class="hidden group-has-[#js-day1:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day1/intro.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">intro.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day1/intro.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day2 -->
+        <div class="hidden group-has-[#js-day2:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day2/daytwo.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">daytwo.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day2/daytwo.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day3 -->
+        <div class="hidden group-has-[#js-day3:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day3/index.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">index.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day3/index.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day4 -->
+        <div class="hidden group-has-[#js-day4:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day4/index.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">index.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day4/index.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day5 -->
+        <div class="hidden group-has-[#js-day5:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day5/jsdayFive.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayFive.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day5/jsdayFive.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day6 -->
+        <div class="hidden group-has-[#js-day6:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day6/jsdaysix.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdaysix.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day6/jsdaysix.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day7 -->
+        <div class="hidden group-has-[#js-day7:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day7/jsdayseven.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayseven.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day7/jsdayseven.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day8 -->
+        <div class="hidden group-has-[#js-day8:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day8/jsdayEight.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayEight.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day8/jsdayEight.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day9 -->
+        <div class="hidden group-has-[#js-day9:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day9/jsdaynine.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdaynine.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day9/jsdaynine.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day10 -->
+        <div class="hidden group-has-[#js-day10:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day10/jsdayTen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayTen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day10/jsdayTen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day11 -->
+        <div class="hidden group-has-[#js-day11:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day11/jsdayEleven.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayEleven.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day11/jsdayEleven.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day12 -->
+        <div class="hidden group-has-[#js-day12:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day12/jsdayTwelve.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayTwelve.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day12/jsdayTwelve.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day13 -->
+        <div class="hidden group-has-[#js-day13:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day13/jsdayThirteen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayThirteen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day13/jsdayThirteen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day14 -->
+        <div class="hidden group-has-[#js-day14:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day14/jsdayFourteen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayFourteen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day14/jsdayFourteen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day15 -->
+        <div class="hidden group-has-[#js-day15:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day15/dayFifteentask.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">dayFifteentask.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day15/dayFifteentask.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="JavaScript/day15/jsdayFifteen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayFifteen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day15/jsdayFifteen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day16 -->
+        <div class="hidden group-has-[#js-day16:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day16/jsdaySixteen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdaySixteen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day16/jsdaySixteen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day17 -->
+        <div class="hidden group-has-[#js-day17:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day17/DashBoard.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">DashBoard.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day17/DashBoard.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="JavaScript/day17/loginPage.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">loginPage.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day17/loginPage.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a href="JavaScript/day17/register.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">register.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day17/register.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day18 -->
+        <div class="hidden group-has-[#js-day18:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day18/jsdayEighteen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayEighteen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day18/jsdayEighteen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- Files for JavaScript / day19 -->
+        <div class="hidden group-has-[#js-day19:checked]/js:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+          <a href="JavaScript/day19/jsdayNineteen.html" target="_blank" rel="noopener noreferrer" class="group/card relative flex items-center justify-between gap-3 p-4 bg-slate-950/70 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-xl no-underline text-slate-100 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40 overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-sky-500 opacity-0 group-hover/card:opacity-100 transition-opacity"></div>
+            <div class="flex items-center gap-3 min-w-0 pr-2">
+              <div class="w-10 h-10 rounded-lg bg-orange-500/15 text-orange-400 border border-orange-500/30 flex items-center justify-center text-base shrink-0">
+                📄
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-slate-100 group-hover/card:text-white truncate">jsdayNineteen.html</span>
+                <span class="text-xs text-slate-400 truncate mt-0.5">JavaScript/day19/jsdayNineteen.html</span>
+              </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-white/5 group-hover/card:bg-sky-500 text-slate-400 group-hover/card:text-slate-950 flex items-center justify-center shrink-0 transition-all duration-200 group-hover/card:scale-105" title="Open in new tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto text-center text-xs text-slate-400 py-6">
+      SLAKKN Frontend Engineering Workspace &bull; Pure HTML &amp; TailwindCSS &bull; All HTML pages open in a new tab
+    </footer>
+  </div>
+</body>
+</html>
