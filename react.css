@@ -1,0 +1,134 @@
+/* Reset & Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #20232a;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Card Container */
+.card {
+    background-color: #282c34;
+    border: 2px solid #3a3f4b;
+    border-radius: 16px;
+    padding: 40px 30px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Topic Header */
+.topic-header {
+    margin-bottom: 35px;
+}
+
+.react-logo {
+    margin-bottom: 15px;
+    animation: rotateLogo 20s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.topic-title {
+    font-size: 38px;
+    color: #61dafb;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+}
+
+.topic-subtitle {
+    font-size: 15px;
+    color: #8a93a5;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Day Buttons */
+.day-btn {
+    position: relative;
+    background-color: #20232a;
+    border: 2px solid #61dafb;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 130px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.day-btn:hover {
+    background-color: #61dafb;
+    border-color: #61dafb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(97, 218, 251, 0.35);
+}
+
+.day-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Anchor Tag Inside Button */
+.day-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 12px 24px;
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.day-btn:hover a {
+    color: #20232a;
+}
+
+/* If anchor tag is empty (no text inside), stretch to fill entire button */
+.day-btn a:empty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+/* Back Link */
+.back-link {
+    margin-top: 32px;
+}
+
+.back-link a {
+    color: #8a93a5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.back-link a:hover {
+    color: #61dafb;
+}

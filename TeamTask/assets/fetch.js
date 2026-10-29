@@ -1,3 +1,5 @@
+console.log("Task 3");
+
 const fetchData=async()=>{
     const datas=await fetch("https://dummyjson.com/products")
     const change = await datas.json()
